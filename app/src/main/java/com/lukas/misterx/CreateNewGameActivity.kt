@@ -7,11 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import kotlin.properties.Delegates
-import kotlin.random.Random
 
 class CreateNewGameActivity : AppCompatActivity() {
-    var gameId by Delegates.notNull<Int>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -23,14 +20,12 @@ class CreateNewGameActivity : AppCompatActivity() {
             insets
         }
 
+        val gameIdTextView: TextView = findViewById(R.id.gameIdTextView)
+        gameIdTextView.text = MainActivity.gamePin.toString()
+
         val backButton: Button = findViewById(R.id.backButton)
         backButton.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
-
-        gameId = Random.nextInt(1, 10000)
-        val gameIdTextView: TextView = findViewById(R.id.gameIdTextView)
-        gameIdTextView.text = gameId.toString()
     }
-
 }

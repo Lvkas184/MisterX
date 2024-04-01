@@ -56,6 +56,7 @@
         android:fontFamily="sans-serif"
         android:text="Spiel-ID:"
         android:textColor="@color/black"
+        android:background="@color/cardview_light_background"
         android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.048"

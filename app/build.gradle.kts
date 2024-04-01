@@ -20,7 +20,10 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
@@ -33,10 +36,15 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
 }
 
 dependencies {
-
+    implementation("androidx.multidex:multidex:2.0.1")
+    implementation("com.google.android.gms:play-services-cast:21.4.0")
+    implementation("com.google.android.gms:play-services-wearable:18.1.0")
+    implementation("androidx.wear:wear:1.3.0")
+    implementation("com.google.android.gms:play-services-auth:21.0.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
