@@ -36,7 +36,7 @@ class JoinGameActivity : AppCompatActivity() {
         joinButton.setOnClickListener {
             val enteredPin = editTextGamePin.text.toString()
             if (enteredPin == MainActivity.gamePin) {
-                val intent = Intent(this, CreateNewGameActivity::class.java)
+                val intent = Intent(this, GameSessionActivity::class.java)
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "Falscher Spiel-Pin eingegeben", Toast.LENGTH_SHORT).show()

@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         button2 = findViewById(R.id.button2)
 
         button1.setOnClickListener {
-            val intent = Intent(this, CreateNewGameActivity::class.java)
+            val intent = Intent(this, GameSessionActivity::class.java)
            gamePin = Random.nextInt(1000, 9999).toString()
             startActivity(intent)
         }
